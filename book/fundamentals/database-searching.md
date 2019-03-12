@@ -265,7 +265,7 @@ We'll now look at a few heuristics in the context of these questions.
 
 ### Random reference sequence selection <link src="bEQxHf"/>
 
-Our first heuristic will be a [straw man](https://en.wikipedia.org/wiki/Straw_man) that we use as a baseline. We'll select a random $p\%$ of the reference sequences to align our query against. This will clearly result in a large decrease in the number of sequence alignments that we need to perform because we'll go from performing $R_s$ (the reference database size) sequence alignments to $p \times R_s$ sequence alignments for each query sequence $q_i$.
+Our first heuristic will be a [straw man](https://en.wikipedia.org/wiki/Straw_man) that we use as a baseline. We'll select a random $p\%$ of the reference sequences to align our query against. This will clearly result in a large decrease in the number of sequence alignments that we need to perform because we'll go from performing $R_s$ (the reference database size) sequence alignments to $p% \times R_s$ sequence alignments for each query sequence $q_i$.
 
 Here's the source code for this. You can see that we're just wrapping our ``local_alignment_search`` function in a function that samples down to $p\%$ of the reference sequences.
 
